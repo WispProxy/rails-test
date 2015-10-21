@@ -1,6 +1,6 @@
 nav
   .container
-    .nav-wrapper
+    .nav
       a href="#/" Add new book
 
 .container
@@ -10,19 +10,19 @@ nav
     form accept-charset="UTF-8" action="/books" enctype="multipart/form-data" method="post"
       .col
 
-        .input-field
+        .input-group
           input.title.validate type="text" ng-model="title" name="book[title]"
           label for="title" Book title
 
-        .input-field
+        .input-group
           texta.description ng-model="description" name="book[description]"
           label for="description" Book description
 
-        .input-field
+        .input-group
           input.image ng-model="image" name="book[image]"
           label for="image" Book image
 
-        .input-field
+        .input-group
           input.image ng-model="release_date" name="book[release_date]"
           label for="release_date" Book release date
 

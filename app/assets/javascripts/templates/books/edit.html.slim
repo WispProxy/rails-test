@@ -1,28 +1,30 @@
-a href="#/" Edit form book
+/a href="#/" Edit form book
 
 .container
   .row
-    h1 {{book.title}}
+    h1 {{ book.title }}
+
   .row
     a.btn.btn-large href="#/" Go to list
+
   .row
     form enctype="multipart/form-data" name="form" ng-submit="submit()" novalidate=""
       .col
 
-        .input-field ng-class="errorClass('title')"
-          label.control-label for="title" Book title
+        .input-group ng-class="errorClass('title')"
+          label for="title" Book title
           input autofocus="" name="title" ng-model="book.title" required="" type="text"
 
-        .input-field ng-class="errorClass('description')"
-          label.control-label for="description" Book description
+        .input-group ng-class="errorClass('description')"
+          label for="description" Book description
           textarea name="description" ng-model="book.description" required="" type="text"
 
         .input-field ng-class="errorClass('image')"
-          label.control-label for="image" Book image
+          label for="image" Book image
           input name="image" ng-model="book.image" required="" type="text"
 
         .input-field ng-class="errorClass('release_date')"
-          label.control-label for="release_date" Book release date
+          label for="release_date" Book release date
           input name="release_date" ng-model="book.release_date" required="" type="number"
 
       .col
