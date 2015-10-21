@@ -1,0 +1,31 @@
+.container
+  .input-field
+    input.search required="" type="search" ng-model="query" placeholder="Search"
+    label for="search"
+      i.fi-page-search
+
+.container
+  .row
+    .col
+      h1 Count books - {{books.length}}
+    .col
+      a.btn href="#/books/new" Add book
+  .row
+    .books-list ng-repeat=("book in books | filter:query") id="book_{{book.id}}"
+      .col
+        .card
+          a href="#/books/{{book.id}}"
+            .card-image
+              img ng-src="{{book.image}}"
+              span.card-title {{book.title}}
+
+          .card-content
+            .card-data {{book.release_at}}
+            .card-description {{book.description}}
+
+          .card-action
+            a href="#/books/{{book.id}}" Card
+            a href="#/books/{{book.id}}/edit"
+              i.fi-pencil
+            a href="" ng-click="destroy(book.id)" data-confirm='Delete?'
+              i.fi-trash

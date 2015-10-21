@@ -1,0 +1,80 @@
+'use strict';
+
+var booksControllers    = angular.module('booksControllers', []);
+
+booksControllers.controller('BooksIndexCtrl', function($scope, Book)
+{
+    $scope.books = Book.query();
+
+    $scope.destroy = function(book_id)
+    {
+        new Book.destroy(
+                {
+                    id: book_id
+                },
+                function(resource)
+                {
+                    $('#book_' + book_id).remove();
+                },
+                function (response)
+                {
+                    /**
+                     *  Just for test
+                     */
+                    console.log(response);
+                }
+        );
+    };
+});
+
+booksControllers.controller('BooksShowCtrl', function($scope, $routeParams, Book)
+{
+    $scope.book = Book.get(
+                        {
+                            id: $routeParams.id
+                        }
+                );
+});
+
+booksControllers.controller("BooksEditCtrl", function($scope, $routeParams, $location, Book)
+{
+    if ($routeParams.id)
+    {
+        $scope.book = Book.show(
+                            {
+                                id: $routeParams.id
+                            }
+                    );
+    }
+    else
+    {
+        $scope.book = new Book();
+    }
+
+    $scope.submit = function()
+    {
+        function success(response)
+        {
+            $location.path("/books");
+        }
+
+        if ($routeParams.id)
+        {
+            Book.update($scope.book, success);
+        }
+        else
+        {
+            Book.create($scope.book, success);
+        }
+    };
+
+    $scope.cancel = function()
+    {
+        $location.path("/books/" + $scope.book.id);
+    };
+});
+
+booksControllers.controller('BooksNewCtrl', function($scope, $routeParams, Book)
+{
+    $scope.book = new Book();
+});

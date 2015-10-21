@@ -1,0 +1,22 @@
+'use strict';
+
+var booksServices   = angular.module('booksServices', [
+    'ngResource'
+]);
+
+booksServices.factory("Book", function($resource)
+{
+    return $resource(
+            "/books/:id",
+            {
+                id: "@id"
+            },
+            {
+                'index':   { method: 'GET', isArray: true },
+                'show':    { method: 'GET', isArray: false },
+                'create':  { method: 'POST' },
+                'update':  { method: 'PUT' },
+                'destroy': { method: 'DELETE' }
+            }
+    );
+});

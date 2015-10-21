@@ -1,0 +1,29 @@
+nav
+  .container
+    .nav-wrapper
+      a href="#/" Add new book
+
+.container
+  .row
+    a.btn.btn-large href="#/" Back
+  .row
+    form accept-charset="UTF-8" action="/books" enctype="multipart/form-data" method="post"
+      .col
+
+        .input-field
+          input.title.validate type="text" ng-model="title" name="book[title]"
+          label for="title" Book title
+
+        .input-field
+          texta.description ng-model="description" name="book[description]"
+          label for="description" Book description
+
+        .input-field
+          input.image ng-model="image" name="book[image]"
+          label for="image" Book image
+
+        .input-field
+          input.image ng-model="release_date" name="book[release_date]"
+          label for="release_date" Book release date
+
+        button.btn.btn-large type="submit" Save

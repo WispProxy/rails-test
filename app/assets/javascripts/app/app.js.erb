@@ -1,4 +1,52 @@
 'use strict';
 
-var booksEditorApp = angular.module('booksEditorApp', []);
+var booksEditorApp = angular.module('booksEditorApp', [
+    'ngRoute',
+    'booksServices',
+    'booksControllers',
+    'templates'
+]);
 
+booksEditorApp.config(['$httpProvider', function($httpProvider)
+{
+    $httpProvider.defaults.headers.common['X-CSRF-Token']   = document.getElementsByName("csrf-token")[0].content;
+    $httpProvider.defaults.headers.common['Accept']         = "application/json";
+}]);
+
+booksEditorApp.config(['$routeProvider', function($routeProvider)
+{
+    $routeProvider
+            .when(
+                "/books",
+                {
+                    templateUrl:    "<%= asset_path('templates/books/index.html') %>",
+                    controller:     "BooksIndexCtrl"
+                }
+            )
+            .when(
+                "/books/:id",
+                {
+                    templateUrl:    "<%= asset_path('templates/books/show.html') %>",
+                    controller:     "BooksShowCtrl"
+                }
+            )
+            .when(
+                "/books/:id/edit",
+                {
+                    templateUrl:    "<%= asset_path('templates/books/edit.html') %>",
+                    controller:     "BooksEditCtrl"
+                }
+            )
+            .when(
+                "/books/new",
+                {
+                    templateUrl:    "<%= asset_path('templates/books/new.html') %>",
+                    controller:     "BooksNewCtrl"
+                }
+            )
+            .otherwise(
+                {
+                    redirectTo:     "/books"
+                }
+            );
+}]);

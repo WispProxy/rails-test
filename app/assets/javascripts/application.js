@@ -11,6 +11,9 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 
+/**
+ *  Vendors part
+ */
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
@@ -19,6 +22,16 @@
 //= require angular-route
 //= require angular-resource
 //= require angular-rails-templates
-//= require angularjs-file-upload
+// require angularjs-file-upload
 
-//= require main
+/**
+ *  Project part
+ */
+//= require app/app
+//= require app/services
+//= require app/controllers
+
+//= require _main
+
+
+//= require_tree ./templates
