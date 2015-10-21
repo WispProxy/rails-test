@@ -78,5 +78,12 @@ module RailsTest
 
     config.active_record.raise_in_transactional_callbacks = true
     config.app_generators.scaffold_controller :responders_controller
+
+    # config.angular_templates.htmlcompressor = {
+    #     :remove_quotes => true
+    # }
+
+    # This HACK for AngularJS templates - compressor!!!
+    # config.angular_templates.htmlcompressor = true
   end
 end

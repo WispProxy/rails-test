@@ -19,28 +19,32 @@ booksEditorApp.config(['$routeProvider', function($routeProvider)
             .when(
                 "/books",
                 {
-                    templateUrl:    "<%= asset_path('templates/books/index.html') %>",
+//                    templateUrl:    "<%= asset_path('templates/books/index.html') %>",
+                    templateUrl:    "books/index.html",
                     controller:     "BooksIndexCtrl"
                 }
             )
             .when(
                 "/books/:id",
                 {
-                    templateUrl:    "<%= asset_path('templates/books/show.html') %>",
+//                    templateUrl:    "<%= asset_path('templates/books/show.html') %>",
+                    templateUrl:    "books/show.html",
                     controller:     "BooksShowCtrl"
                 }
             )
             .when(
                 "/books/:id/edit",
                 {
-                    templateUrl:    "<%= asset_path('templates/books/edit.html') %>",
+//                    templateUrl:    "<%= asset_path('templates/books/edit.html') %>",
+                    templateUrl:    "books/edit.html",
                     controller:     "BooksEditCtrl"
                 }
             )
             .when(
                 "/books/new",
                 {
-                    templateUrl:    "<%= asset_path('templates/books/new.html') %>",
+//                    templateUrl:    "<%= asset_path('templates/books/new.html') %>",
+                    templateUrl:    "books/new.html",
                     controller:     "BooksNewCtrl"
                 }
             )

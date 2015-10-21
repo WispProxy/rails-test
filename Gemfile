@@ -22,6 +22,7 @@ gem "autoprefixer-rails"
 
 gem 'angularjs-rails'
 gem 'angular-rails-templates'
+gem 'htmlcompressor'
 
 gem 'angularjs-file-upload-rails', '~> 1.1.6'
 
