@@ -57,9 +57,6 @@ GEM
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
       rack (>= 0.9.0)
-    bootstrap-sass (3.3.5.1)
-      autoprefixer-rails (>= 5.0.0.1)
-      sass (>= 3.3.0)
     builder (3.2.2)
     byebug (5.0.0)
       columnize (= 0.9.0)
@@ -151,6 +148,8 @@ GEM
     lumberjack (1.0.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    materialize-sass (0.97.1)
+      sass (~> 3.3)
     method_source (0.8.2)
     mime-types (2.6.2)
     mini_magick (4.3.6)
@@ -332,7 +331,6 @@ DEPENDENCIES
   auto_html
   autoprefixer-rails
   better_errors
-  bootstrap-sass (~> 3.3.5)
   byebug
   capybara
   carrierwave
@@ -348,6 +346,7 @@ DEPENDENCIES
   jbuilder
   jquery-rails
   launchy
+  materialize-sass
   mini_magick
   normalize-rails
   pg

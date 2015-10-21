@@ -16,7 +16,8 @@ gem 'jquery-rails'
 gem 'jbuilder'
 
 gem 'normalize-rails'
-gem 'bootstrap-sass', '~> 3.3.5'
+# gem 'bootstrap-sass', '~> 3.3.5'
+gem 'materialize-sass'
 gem 'foundation-icons-sass-rails'
 gem "autoprefixer-rails"
 
