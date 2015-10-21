@@ -11,7 +11,7 @@
     /.col
     /  a.btn href="#/books/new" Add book
   .row
-    .books-list ng-repeat=("book in books | filter:query") id="book_{{book.id}}"
+    .books-list ng-repeat=("book in books | orderBy: 'id' | filter:query") id="book_{{book.id}}"
       .col
         .card
           a href="#/books/{{book.id}}"
@@ -20,7 +20,7 @@
               span.card-title {{book.title}}
 
           .card-content
-            .card-data {{book.release_at}}
+            .card-data {{book.release_date}}
             .card-description {{book.description}}
 
           .card-action

@@ -34,5 +34,7 @@
 
 //= require _main
 
-
+/**
+ *  Include AngularJS templates
+ */
 //= require_tree ./templates
