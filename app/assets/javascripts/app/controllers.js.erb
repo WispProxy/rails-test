@@ -70,7 +70,8 @@ booksControllers.controller("BooksEditCtrl", function($scope, $routeParams, $loc
 
     $scope.cancel = function()
     {
-        $location.path("/books/" + $scope.book.id);
+//        $location.path("/books/" + $scope.book.id);
+        $location.path("/books/");
     };
 });
 
