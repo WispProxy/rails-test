@@ -63,3 +63,10 @@ Book.create(
     image:        'http://cdn.tutorialzine.com/wp-content/uploads/2015/05/learn-js-4.jpg',
     release_date: '2002'
 )
+
+Book.create(
+    title:        'Beginning JavaScript 4th Edition',
+    description:  'Description for test book',
+    image:        'http://images.amazon.com/images/P/0470525932.MZZZZZZZ.jpg',
+    release_date: '2005'
+)
