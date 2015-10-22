@@ -27,6 +27,9 @@ gem 'htmlcompressor'
 
 gem 'angularjs-file-upload-rails', '~> 1.1.6'
 
+# For Heroku deploy
+gem 'heroku'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
