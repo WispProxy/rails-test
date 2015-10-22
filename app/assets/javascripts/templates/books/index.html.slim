@@ -7,25 +7,28 @@
 .container
   .row
     .col
-      h1 Count books - {{books.length}}
+      h1 Count books - {{ books.length }}
     /.col
     /  a.btn href="#/books/new" Add book
   .row
-    .books-list ng-repeat=("book in books | orderBy: 'id' | filter:query") id="book_{{book.id}}"
+    .books__list ng-repeat=("book in books | orderBy: 'id' | filter: query") id="book_{{ book.id }}"
       .col
         .card
-          a href="#/books/{{book.id}}"
-            .card-image
-              img ng-src="{{book.image}}"
-              span.card-title {{book.title}}
+          a href="#/books/{{ book.id }}"
+            .card__image
+              img ng-src="{{ book.image }}"
 
-          .card-content
-            .card-data {{book.release_date}}
-            .card-description {{book.description}}
+          .card__content
+            a href="#/books/{{ book.id }}"
+              .card__title    {{ book.title }}
+            .card__data         {{ book.release_date }}
+            .card__description  {{ book.description }}
 
-          .card-action
-            a href="#/books/{{book.id}}" Card
-            a href="#/books/{{book.id}}/edit"
-              i.fi-pencil
+          .card__action
+            .card__left
+              a href="#/books/{{ book.id }}" Card
+            .card__right
+              a href="#/books/{{ book.id }}/edit"
+                i.fi-pencil
             /a href="" ng-click="destroy(book.id)" data-confirm='Delete?'
             /  i.fi-trash

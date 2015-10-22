@@ -1,0 +1,75 @@
+.card
+{
+  padding-bottom:   10px;
+
+  &__image
+  {
+    padding:  10px;
+
+    img
+    {
+      width:    250px;
+      height:   250px;
+    }
+  }
+
+  &__content
+  {
+    padding:  10px;
+  }
+
+  &__title
+  {
+
+  }
+
+  &__data
+  {
+
+  }
+
+  &__description
+  {
+
+  }
+
+  &__action
+  {
+    padding:  10px;
+  }
+
+  &__left
+  {
+    float:  left;
+  }
+
+  &__right
+  {
+    float:  right;
+  }
+
+  &__input_title
+  {
+
+  }
+
+  &__input_description
+  {
+
+  }
+
+  &__input_image
+  {
+
+  }
+
+  &__input_date
+  {
+
+  }
+
+  &__button
+  {
+
+  }
+}

@@ -5,17 +5,21 @@
 
 .container
   .row
-    a.btn.btn-large.right.light-blue.darken-3 href="#/" Go to list
+    .book__button
+      a.btn.btn-large.right.light-blue.darken-3 href="#/" Go to books list
 
   .row
     .col
-      img ng-src="{{book.image}}"
+      .book__image
+        img ng-src="{{ book.image }}"
 
     .col
-      h2 {{book.title}}
-      .book-description {{book.description}}
-      .book-release_date {{book.release_date}}
+      .book__title
+        h1    {{ book.title }}
+      .book__description    {{ book.description }}
+      .book__release_date   {{ book.release_date }}
 
   .row
     .col
-      a.btn href="#/books/{{book.id}}/edit" Edit
+      .book__button
+        a.btn href="#/books/{{ book.id }}/edit" Edit

@@ -55,7 +55,8 @@ booksControllers.controller("BooksEditCtrl", function($scope, $routeParams, $loc
     {
         function success(response)
         {
-            $location.path("/books");
+//            $location.path("/books");
+            $location.path("/books/" + $scope.book.id);
         }
 
         if ($routeParams.id)

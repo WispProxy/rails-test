@@ -2,29 +2,36 @@
 
 .container
   .row
-    h1 {{book.title}}
+    .card__button
+      a.btn.btn-large.right.light-blue.darken-3 href="#/" Go to books list
   .row
-    a.btn.btn-large href="#/" Go to list
+    .card__title
+      h1  {{ book.title }}
   .row
     form enctype="multipart/form-data" name="form" ng-submit="submit()" novalidate=""
-      .col
+      .row
 
-        .input-field ng-class="errorClass('title')"
-          label.control-label for="title" Book title
-          input autofocus="" name="title" ng-model="book.title" required="" type="text"
+        .card__input_title
+          label.control-label for="title" Book title:
+          .input-field
+            input autofocus="" name="title" ng-model="book.title" required="" type="text" maxlength="140" min="4"
 
-        .input-field ng-class="errorClass('description')"
-          label.control-label for="description" Book description
-          textarea name="description" ng-model="book.description" required="" type="text"
+        .card__input_description
+          label.control-label for="description" Book description:
+          .input-field
+            textarea name="description" ng-model="book.description" required="" type="text" maxlength="140" min="4"
 
-        .input-field ng-class="errorClass('image')"
-          label.control-label for="image" Book image
-          input name="image" ng-model="book.image" required="" type="text"
+        .card__input_image
+          label.control-label for="image" Book image:
+          .input-field
+            input name="image" ng-model="book.image" required="" type="text" min="4"
 
-        .input-field ng-class="errorClass('release_date')"
-          label.control-label for="release_date" Book release date
-          input name="release_date" ng-model="book.release_date" required="" type="number"
+        .card__input_date
+          label.control-label for="release_date" Book release date:
+          .input-field
+            input name="release_date" ng-model="book.release_date" required="" type="number" maxlength="140" min="4"
 
-      .col
-        a.btn ng-click="cancel()" Cancel
-        button.btn.btn-success type="submit" Save
+      .row
+        .card__button
+          a.btn ng-click="cancel()" Cancel
+          button.btn.btn-success type="submit" Save
