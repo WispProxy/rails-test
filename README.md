@@ -30,3 +30,33 @@
 Читаемость и консистентность это важно.
 
 Верстка произвольная, главное чтобы все отображалось и работало. Используем slim.
+
+###Описание от разработчика
+
+Todo (some features):
+
+   1. Добавить и сконфигурировать Uploader для image.
+   2. Rails Views: delete & create - переделать.
+      AngularJS MV*: delete - проверить.
+   3. Изменить тип таблицы в migration image на binary.
+   4. Убрать лишние gem'ы и почистить код.
+   5. Подготовить проект в production.
+
+Запуск тестового проекта:
+
+   0. Создать БД, установить Rails, прописать настройки для подключения к БД.
+   1. bundle install & bundle update
+   2. rake db:migration
+   3. rake db:seed
+   4. rails s
+   5. Зайти по адресу: http://localhost:3000/
+
+Запуск тестов:
+
+   * rake spec
+   * rake spec:controllers
+   * rake spec:models
+
+Сгенерировать документацию:
+   
+   * rake doc:app
