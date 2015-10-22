@@ -72,4 +72,26 @@
   {
 
   }
+
+  &__button_cancel
+  {
+    margin-right:   10px;
+    float:          left;
+
+    .btn
+    {
+      color:              $color__material__grey;
+      background-color:   $color__light_grey;
+    }
+  }
+
+  &__button_save
+  {
+    float:          left;
+
+    .btn
+    {
+
+    }
+  }
 }
